@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import landingpage from "@/assets/images/landing-page.png";
+import bmwapp from "@/assets/images/bmw-site.png";
+import flipit from "@/assets/images/flipit.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,46 +10,46 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Holberton School",
+    year: "2024",
+    title: "One Up Shad Landing Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Project from scratch (HTML, CSS, JavaScript)" },
+      { title: "Dark interface with scroll animations" },
+      { title: "Promotion of an iconic lure for fishing" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://lucasngre.github.io/Responsive_landing-page/",
+    image: landingpage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Holberton School",
+    year: "2024",
+    title: "Showcase Car 3D",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Practice to work with Threejs" },
+      { title: "Develop an incredible user experience" },
+      { title: "Not deployed" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://lucasngre.github.io/Showcase-car/",
+    image: bmwapp,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Holberton School",
+    year: "2024",
+    title: "Flip It marketplace",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Final project of the first year in Holbert School" },
+      { title: "A marketplace with a good UI and UX" },
+      { title: "Not deployed" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/LucasNGRE/FlipIt",
+    image: flipit,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader eyebrown="Real-world Results" title="Featured projects" description="See how i transformed concepts into engaging digital experiences" />
           <div className="flex flex-col mt-10 md:mt-20 gap-20">
@@ -77,10 +77,13 @@ export const ProjectsSection = () => {
                       ))}
                     </ul>
                     <a href={project.link}>
-                      <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                        <span>Visit Live Site</span>
-                        <ArrowUpRightIcon className="size-4 ml-2" />
-                      </button>
+                    <button 
+                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 
+                                hover:bg-gray-950/50 hover:text-white transition-colors duration-200 ease-in-out">
+                      <span>More info</span>
+                      <ArrowUpRightIcon className="size-4 ml-2" />
+                    </button>
+
                     </a>
                   </div>
                   <div className="relative">

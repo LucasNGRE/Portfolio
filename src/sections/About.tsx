@@ -1,8 +1,9 @@
 "use client";
 
+import music from "@/assets/images/music.png";
 import { SectionHeader } from "./SectionHeader";
 import { Card } from "@/components/Card";
-import bookImage from "@/assets/images/book-cover.png";
+import test from "@/assets/images/test.png";
 import Image from "next/image";
 import TypescriptIcon from "@/assets/icons/typescript-white.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
@@ -95,15 +96,15 @@ const hobbies = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader eyebrown="About Me" title="Welcome To My World" description="Learn more about who I amand what I do" />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1 ">
-              <CardHeader title="My Reads" description="Explore the books shaping my perspectives"/>
+              <CardHeader title="Best Song" description="Discover 'On est Peace' by Chinwvr."/>
               <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book cover"/>
+                <Image src={test} alt="Book cover" className="rounded-xl"/>
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
@@ -120,7 +121,7 @@ export const AboutSection = () => {
               <CardHeader title="Beyond the Code" description="Explore my interests and hobbies beyond the digital realm." className="px-6 pt-6"/>
               <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map(hobby => (
-                  <motion.div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  <motion.div key={hobby.title} className="cursor-pointer inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
                   style={{
                     left: hobby.left,
                     top: hobby.top,
