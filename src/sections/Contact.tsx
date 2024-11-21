@@ -135,12 +135,12 @@ export const ContactSection = () => {
                     aria-hidden="true"
                   />
 
-<button 
-  type="submit" 
-  className="bg-emerald-500 text-white px-6 py-2 rounded-xl mt-4 
-             hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-out">
-  Send Message
-</button>
+                  <button 
+                    type="submit" 
+                    className="bg-emerald-500 text-white px-6 py-2 rounded-xl mt-4 
+                              hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-out">
+                    Send Message
+                  </button>
 
                 </div>
               </form>
